@@ -10,6 +10,7 @@ const typeDefs = gql`
         age: Int! 
         nationality: Nationality!
         friends: [User]
+        favouriteMovies: [Movie] 
     }
 
     type Movie {
@@ -27,6 +28,19 @@ const typeDefs = gql`
         allowedMovie(familyFriendly: Boolean!): Movie
     }
 
+    input CreateUserInput {
+        name: String!,
+        username: String!
+        age: Int! 
+        nationality: Nationality = British
+        friends: [User]
+        favouriteMovies: [Movie] 
+    }
+
+    type Mutation {
+        createUser(input: CreateUserInput!): User!
+    }
+
     enum Nationality{
         CANADA
         BRAZIL
@@ -34,6 +48,6 @@ const typeDefs = gql`
         GERMANY
         CHILE
     }
-
 `
+
 module.exports = {typeDefs}
