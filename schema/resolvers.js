@@ -3,7 +3,7 @@ const _ = require("lodash");
 
 const resolvers = {
     Query: {
-        users() {
+        users: () => {
             return UserList
         },
         //parent argument gives value resolved by parent in chain of types ??
@@ -11,14 +11,21 @@ const resolvers = {
             return _.find(UserList, {id: Number(args.id)})
         },
 
-        movies() {
+        movies: () => {
             return MovieList
         },
 
-        allowedMovie(parent, args){
+        allowedMovie: (parent, args) => {
             return _.find(MovieList, {familyFriendly: Boolean(args.familyFriendly)});
         }
+    },
+
+    Mutation: {
+        createUser: () => {
+
+        }
     }
+
 }
 
 module.exports = { resolvers }
