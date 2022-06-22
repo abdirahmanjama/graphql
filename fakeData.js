@@ -65,26 +65,33 @@ const UserList = [
       {
         id: 1,
         name: "Avengers Endgame",
-        yearOfPublication: 2019,
+        familyFriendly: true,
         isInTheaters: true,
+        releaseYear: 2022
       },
       {
         id: 2,
         name: "Interstellar",
-        yearOfPublication: 2007,
+        familyFriendly: true,
         isInTheaters: true,
+        releaseYear: 1998
+
       },
       {
         id: 3,
         name: "Superbad",
-        yearOfPublication: 2009,
+        familyFriendly: false,
         isInTheaters: true,
+        releaseYear: 1999
+
       },
       {
         id: 4,
-        name: "PedroTech The Movie",
-        yearOfPublication: 2035,
+        name: "Abdirahman Jama The Movie",
+        familyFriendly: false,
         isInTheaters: false,
+        releaseYear: 2001
+
       },
 ];
 
