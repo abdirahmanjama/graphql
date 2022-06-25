@@ -40,7 +40,15 @@ const resolvers = {
             } 
         })
           return userUpdated;
-        } 
+        },
+
+        //TODO: 
+        //given an ID -> remove user with ID from list
+        deleteUser: (parent, args) => {
+            const id = args.id;
+        }
+        
+        
     }
 }
 
