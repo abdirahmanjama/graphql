@@ -46,6 +46,8 @@ const resolvers = {
         //given an ID -> remove user with ID from list
         deleteUser: (parent, args) => {
             const id = args.id;
+            _.remove(UserList, user => user.id === Number(id))
+            return null
         }
         
         
